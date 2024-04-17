@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>  
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="algorithms.html">Algorithms</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <div class="header-text">
+                        <p>Fullstack Engineer</p>
+                        <h1>Hi, I'm <span>Ben</span><br> Jacobs From Colorado</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- -------------- About --------------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/Untitled3.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>My name is Ben Jacobs and I am a fullstack software engineer.
+                         I was raised in Colorado and graduated from the University of Colorado
+                         with a degree of Bachelor Science in Computer Science from the school 
+                         of engineering. My primary hobbies consist of culinary creations, skiing, 
+                         weightlifting, running, video game design, and building computers. I am 
+                         seeking a role that utilizes my knowledge around software development as well 
+                         as pushes me to diversify my understanding of programming languages even further. </p>
+                    
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Languages</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Angular</span><br>Language used in a majority of my professional career</li>
+                                <li><span>React</span><br>Created web apps for internships</li>
+                                <li><span>SQL</span><br>Database management used in industry</li>
+                                <li><span>C++</span><br>Primary language used throughout my college career</li> 
+                                <li><span>Java</span><br>First programming language</li>
+                                <li><span>Javascript</span><br>Used closely with frontend development</li>
+                                <li><span>Html/CSS</span><br>Stylistic languages when creating web apps both personally and professionaly</li>
+                                <li><span>C#</span><br>Backend development used in industry</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Experience</span><br>Design</li>
+                                <li><span>Backend</span><br>Web App Development</li>
+                                <li><span>SQL</span><br>Database Management</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Education</span><br>Design</li>
+                                <li><span>Backend</span><br>Web App Development</li>
+                                <li><span>SQL</span><br>Database Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ---------------------- Services ------------------------- -->
+<div class="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>this is an extensive description whadkj wahjakfjgopi nfkj gkjvojdn</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>UI/UX</h2>
+                <p>this is an extensive description whadkj wahjakfjgopi nfkj gkjvojdn</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>App Design</h2>
+                <p>this is an extensive description whadkj wahjakfjgopi nfkj gkjvojdn</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
